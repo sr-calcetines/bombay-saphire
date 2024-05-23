@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/CSS/style.css">
+  <title>Admin Panel</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
+        <li><a href="puebloMes.html">Pueblo del més</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="panelAdmin.html">Admin Panel</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <h2>Admin Panel</h2>
+    <form id="crud-form">
+      <input type="hidden" id="id">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" required></textarea>
+      <label for="coordenadas">Coordenadas:</label>
+      <input type="text" id="coordenadas" required>
+      <label for="imagenes">Imágenes (JSON):</label>
+      <textarea id="imagenes" required></textarea>
+      <button type="button" onclick="createOrUpdate()">Guardar</button>
+      <button type="button" onclick="clearForm()">Limpiar</button>
+    </form>
+    
+    <h3>Lista de Pueblos</h3>
+    <table id="pueblos-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Coordenadas</th>
+          <th>Imágenes</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  
+  <script src="static/JS/crud.js"></script>
+</body>
+</html>

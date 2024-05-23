@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/CSS/style.css">
+  <title>Login</title>
+  <script src="static/JS/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="static/JS/crearCuenta.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="sobreNosotros.html">Sobre nosotros</a></li>
+        <li><a href="puebloMes.html">Pueblo del més</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+<div class="super">
+
+  <div class="container">
+    <section id="login">
+      <h2>Iniciar Sesión</h2>
+      <form id="login-form" action="login.php" method="post">
+        <label for="usuario">Nombre de Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+        <button type="button" id="login-button">Iniciar Sesión</button>
+      </form>
+    </section>
+
+
+    <section id="registro">
+      <h2>Registrar Usuario</h2>
+      <form action="#" method="post">
+        <label for="nuevo-usuario">Nombre de Usuario:</label>
+        <input type="text" id="nuevo-usuario" name="nuevo-usuario" required>
+
+        <label for="nueva-contrasena">Contraseña:</label>
+        <input type="password" id="nueva-contrasena" name="nueva-contrasena" required>
+
+        <button type="submit" id="crear-cuenta-button">Crear Cuenta</button>
+      </form>
+    </section>
+
+  </div>
+
+</div>
+<script src="static/JS/login.js"></script>
+</body>
+
+</html>

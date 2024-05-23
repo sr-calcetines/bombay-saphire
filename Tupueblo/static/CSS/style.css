@@ -1,0 +1,302 @@
+/* Paleta de colores */
+:root {
+    --color-primario: #FFFFFF;
+    --color-secundario: #000000;
+    --color-fondo: #4b994e;
+    --color-verdeBoton: #2b782e;
+    --color-verdeBotonHover: #1c4f1d;
+
+    --color-texto-principal: #333333;
+    --color-texto-secundario: #555555;
+
+}
+
+/* Tipografía */
+h1,
+h2,
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-primario);
+}
+
+/* Enlaces */
+a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 15px;
+}
+
+a:hover {
+    color: var(--color-primario);
+}
+
+/* Estilos básicos */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-texto-secundario);
+    color: var(--color-texto-principal);
+}
+
+header {
+    background-color: var(--color-primario);
+    color: var(--color-primario);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 25px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-primario);
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-texto-principal);
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: var(--color-fondo);
+}
+
+.container {
+    background-color: var(--color-fondo);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.super {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Botones */
+button {
+    background-color: var(--color-verdeBoton);
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1c4f1d;
+}
+
+/* Estilos específicos para la página de inicio */
+.hero img,
+.categorias img,
+.destacados img,
+.producto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sobreNosotros a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--color-verdeBoton);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sobreNosotros a:hover {
+    background-color: var(--color-verdeBotonHover);
+}
+
+/*Estilos hero*/
+.hero {
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid var(--color-texto-secundario);
+    padding-bottom: 20px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero h1 {
+    background-color: rgb(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 4em;
+}
+
+.hero p {
+    font-size: 1.5em;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.hero a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--color-fondo);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Estilos específicos para la página de información */
+section.info {
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--color-texto-secundario);
+    padding-bottom: 20px;
+    text-align: center;
+}
+.conocenos{
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos específicos para la página de pueblos */
+
+.imagenes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.imagenes img {
+    width:30%;
+}
+
+/* Estilo para los puntos y el texto de cada ítem de la lista */
+#actividades ul {
+    list-style: none;
+    padding: 0;
+}
+#actividades ul li {
+    position: relative;
+    padding-left: 30px; /* Espacio para la imagen */
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    color: var(--color-primario); /* Color del texto */
+    line-height: 1.5; /* Altura de línea */
+    border-bottom: 1px solid var(--color-texto-secundario);
+    display: flex; /* Alineación de elementos */
+    align-items: center; /* Centrar verticalmente */
+}
+#actividades ul li::before {
+    content: "•"; /* Punto personalizado */
+    position: relative;
+    left: 0;
+    top: 0; /* Ajuste vertical */
+    color: #fff; /* Color del punto */
+    font-size: 4.5em; /* Tamaño de punto más grande */
+}
+/* Espaciado después de cada ítem de la lista */
+#actividades ul li:not(:last-child) {
+    margin-bottom: 10px; /* Espacio entre ítems */
+}
+
+#actividades ul li img {
+    margin-left: auto; /* Alinear a la derecha */
+    width: 100px; /* Ancho deseado de la imagen */
+    height: auto; /* Altura automática */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-right: 20px; /* Espacio a la derecha */
+}
+
+/*Estilos específicos para slider*/
+.slider {
+	width: 95%;
+    height: 40em;
+	margin: auto;
+	overflow: hidden;
+    position: relative;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+	width: 100%;
+    height: 100%;
+	object-fit: contain;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
